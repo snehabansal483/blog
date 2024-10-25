@@ -1,6 +1,6 @@
 // components/About.js
 import React from 'react';
-
+import Image from 'next/image';
 
 const projects = [
   {
@@ -35,7 +35,7 @@ const About = () => {
 
       <div className="flex flex-col md:flex-row items-center md:space-x-6 mb-8">
         <div className="w-full md:w-1/2 mb-6 md:mb-0">
-          <img
+          <Image
             src="/img/about.jpg" // Replace with an actual image path
             alt="About"
             className="w-full h-64 object-cover rounded-lg shadow-lg transform transition-transform duration-500 hover:scale-105"
@@ -53,7 +53,7 @@ const About = () => {
             Whether you are a beginner or an experienced developer, we have something for everyone!
           </p>
           <p className="mb-4">
-            Join us on this journey, and let's explore the world of web development together!
+            Join us on this journey, and let&apos;s explore the world of web development together!
           </p>
         </div>
       </div>
@@ -61,12 +61,12 @@ const About = () => {
       {/* Project Showcase Section */}
       <h2 className="text-4xl font-bold text-center mb-6 text-blue-700 animate-pulse">Project Showcase</h2>
       <p className="text-center">
-        Check out some of the amazing projects we've worked on!
+        Check out some of the amazing projects we&apos;ve worked on!
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project) => (
           <div key={project.title} className="border rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105">
-            <img
+            <Image
               src={project.image}
               alt={project.title}
               className="w-full h-48 object-cover"

@@ -1,7 +1,7 @@
 
 'use client';
 
-import React, { use, useEffect } from 'react'
+import React, {useEffect } from 'react'
 import Link from 'next/link';
 import { useState } from 'react';
 import { Button } from "@/components/ui/button"
@@ -18,14 +18,15 @@ const Navbar = () => {
   
   useEffect(() => {
     setProgress(30);
-    setTimeout(() =>{
-      setProgress(70),
-
-    100}
-    )
-    setTimeout(() =>{
-      setProgress(100)},800
-    )
+    
+    setTimeout(() => {
+      setProgress(70);
+    }, 100); // Corrected delay
+  
+    setTimeout(() => {
+      setProgress(100);
+    }, 800);
+    
   }, [pathname]);
 
   useEffect(() => {

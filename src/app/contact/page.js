@@ -60,7 +60,7 @@ const Contact = () => {
           Contact Us
         </h1>
         <p className="text-white mb-8 text-lg">
-          Got a question or feedback? We'd love to hear from you. Reach out using the form below!
+          Got a question or feedback? We&apos;d love to hear from you. Reach out using the form below!
         </p>
 
         <div className="grid md:grid-cols-2 gap-8">

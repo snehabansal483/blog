@@ -8,7 +8,9 @@ const Login = () => {
   const router = useRouter(); 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+ // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [error, setError] = useState('');
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -97,7 +99,7 @@ const Login = () => {
 
         {/* Signup Redirect */}
         <p className="mt-6 text-center text-gray-500">
-          Don't have an account?{' '}
+          Don&apos;t have an account?{' '}
           <a
             href="/signup"
             className="text-blue-600 hover:text-blue-400 transition-colors duration-300"
