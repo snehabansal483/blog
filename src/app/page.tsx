@@ -1,8 +1,7 @@
 "use client"
 
 import React, { useEffect, useRef } from 'react';
-import Image from 'next/image';  // Fix: Use named import for next/image
-// import Navbar from '@/components/Navbar';
+import Image from 'next/image';  
 import { Button } from '@/components/ui/button';
 import Typed from 'typed.js';
 
@@ -10,36 +9,35 @@ import Typed from 'typed.js';
 
 
 export default function Home() {
-  const el = useRef(null); // Create a ref to hold the DOM element
+  const el = useRef(null); 
 
   useEffect(() => {
-    if (el.current) { // Check if el.current is not null
+    if (el.current) { 
       const typed = new Typed(el.current, {
         strings: ['Coding', 'Web Development', 'Software Engineer'],
         typeSpeed: 50,
       });
 
       return () => {
-        typed.destroy(); // Cleanup typed.js instance on component unmount
+        typed.destroy(); 
       };
     }
-  }, []); // Empty dependency array to run only once on mount
+  }, []); 
   return (
     <>
-      {/* Include Navbar component<Navbar />  */}
       <main>
       <section className="container px-8 py-10 mx-auto lg:h-128 lg:space-x-12 lg:flex lg:items-center">
   {/* Text Section */}
   <div className="w-full text-center lg:text-left lg:w-1/2 lg:mt-0">
-    <h1 className="text-3xl leading-snug text-gray-800 dark:text-gray-200 md:text-4xl">
-      A <span className="font-semibold">free repository</span> for community 
+  <h1 className="text-3xl leading-snug text-gray-800 dark:text-gray-200 md:text-4xl">
+      Welcome to <span className="font-semibold">Sneha Blog</span>, a hub for 
       <br className="hidden lg:block" />
-      components using <span className="font-semibold underline decoration-primary">  <span ref={el} /></span>
+      intricate insights on <span className="font-semibold underline decoration-primary"><span ref={el} /></span>
     </h1>
     <p className="mt-4 text-lg text-gray-500 dark:text-gray-300">
-      Open source Tailwind UI components and templates to 
+      Discover detailed perspectives and unique information to 
       <br className="hidden lg:block" /> 
-      bootstrap your new apps, projects, or landing sites!
+      enrich your understanding and spark your curiosity!
     </p>
     <div className="mt-6 bg-transparent border rounded-lg dark:border-gray-700 lg:w-2/3 focus-within:border-primary focus-within:ring focus-within:ring-primary dark:focus-within:border-primary focus-within:ring-opacity-20">
       <form action="https://www.creative-tim.com/twcomponents/search" className="flex flex-wrap justify-between md:flex-row">
