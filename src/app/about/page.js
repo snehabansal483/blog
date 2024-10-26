@@ -6,20 +6,20 @@ const projects = [
   {
     title: "Fitness Tracker Chatbot",
     description: "A virtual assistant designed to help users monitor and improve their fitness routines.",
-    image: "/img/fitnesstracker.png", // Replace with your actual image path
-    link: "https://fitness-alpha-roan.vercel.app/", // Replace with your project link
+    image: "/img/fitnesstracker.png", 
+    link: "https://fitness-alpha-roan.vercel.app/", 
   },
   {
     title: "Sorting Visualization",
     description: "An interactive visualization tool for understanding sorting algorithms.",
-    image: "/img/sorting-visualisation.png", // Replace with your actual image path
-    link: "https://dsatutorial.vercel.app/sorting_main.html", // Replace with your project link
+    image: "/img/sorting-visualisation.png", 
+    link: "https://dsatutorial.vercel.app/sorting_main.html", 
   },
   {
     title: "Mascot Landing Page",
     description: "A fully responsive landing page showcasing a brand mascot.",
-    image: "/img/mascot-landing.png", // Replace with your actual image path
-    link: "https://task-5-final.vercel.app/", // Replace with your project link
+    image: "/img/Mascot-landing.png", 
+    link: "https://task-5-final.vercel.app/", 
   },
 ];
 
