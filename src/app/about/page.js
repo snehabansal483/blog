@@ -34,13 +34,16 @@ const About = () => {
       </p>
 
       <div className="flex flex-col md:flex-row items-center md:space-x-6 mb-8">
-        <div className="w-full md:w-1/2 mb-6 md:mb-0">
-          <Image
-            src="/img/about.jpg" // Replace with an actual image path
-            alt="About"
-            className="w-full h-64 object-cover rounded-lg shadow-lg transform transition-transform duration-500 hover:scale-105"
-          />
-        </div>
+      <div className="w-full md:w-1/2 mb-6 md:mb-0">
+  <Image
+    src="/img/about.jpg" 
+    alt="About"
+    width={500} 
+    height={300} 
+    className="w-full h-64 object-cover rounded-lg shadow-lg transform transition-transform duration-500 hover:scale-105"
+  />
+</div>
+
         <div className="w-full md:w-1/2">
           <h3 className="text-2xl font-semibold mb-2">Welcome to Our Blog!</h3>
           <p className=" mb-4">
@@ -69,6 +72,8 @@ const About = () => {
             <Image
               src={project.image}
               alt={project.title}
+              width={400} 
+              height={200} 
               className="w-full h-48 object-cover"
             />
             <div className="p-4">
