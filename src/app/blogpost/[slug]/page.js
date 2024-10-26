@@ -151,11 +151,11 @@ export default function Page({ params }) {
       }
       return (
         <div key={index} className="relative mb-4">
-          <pre className=" p-2 rounded">
-            <code>{part}</code>
+          <pre className="p-4 rounded overflow-x-auto">
+            <code className="whitespace-pre">{part}</code>
             <button
               onClick={() => handleCopy(part)}
-              className="absolute top-1 right-1 bg-blue-500 text-white px-2 py-1 rounded hover:bg-blue-600 transition duration-200"
+              className="absolute top-1 right-1 bg-blue-500 text-white px-2 py-1 rounded hover:bg-blue-600 transition duration-200 text-sm md:text-base"
             >
               Copy
             </button>
@@ -169,20 +169,20 @@ export default function Page({ params }) {
     <div className="relative mb-4">
       <pre className="p-2 rounded ">
         <code>{code}</code>
+        <button
+          onClick={() => handleCopy(code)}
+          className="absolute top-1 right-1 bg-blue-500 text-white px-2 py-1 rounded hover:bg-blue-600 transition duration-200"
+        >
+          Copy
+        </button>
       </pre>
-      <button
-        onClick={() => handleCopy(code)}
-        className="absolute top-1 right-1 bg-blue-500 text-white px-2 py-1 rounded hover:bg-blue-600 transition duration-200"
-      >
-        Copy
-      </button>
     </div>
   );
 
   return (
     <div className="max-w-7xl mx-auto p-6">
-      <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
-      <div className="flex justify-between text-gray-500 text-sm mb-4">
+      <h1 className="text-3xl md:text-4xl font-bold mb-4">{post.title}</h1>
+      <div className="flex flex-col md:flex-row justify-between text-gray-500 text-sm mb-4">
         <span>{post.date}</span>
         <span>{post.author}</span>
       </div>
@@ -192,8 +192,10 @@ export default function Page({ params }) {
       <div className="prose mb-6" dangerouslySetInnerHTML={{ __html: post.detailedDescription }} />
 
       {/* Render the code example here */}
-      <h3 className="text-xl font-semibold mb-2">Code Example</h3>
-      {renderCodeExample(post.codeExample)}
+      <h3 className="text-xl font-semibold mb-4">Code Example</h3>
+       <div className="overflow-x-auto mb-6">
+          {renderCodeExample(post.codeExample)}
+       </div>
 
       <div className="prose">{renderContentWithCopyButtons(post.content)}</div>
       {copyMessage && <p className="text-green-500 mt-2">{copyMessage}</p>}
